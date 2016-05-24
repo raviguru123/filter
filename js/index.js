@@ -12,10 +12,6 @@ function MyController($scope){
 		
 	}
 }
-
-
-
-
 document.addEventListener("DOMContentLoaded",function(event){
 	console.log("hello");
 	var chart = c3.generate({
@@ -77,4 +73,3 @@ document.addEventListener("DOMContentLoaded",function(event){
 	});
 
 });
-
