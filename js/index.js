@@ -8,7 +8,6 @@ app.controller('MyController', ['$scope', function($scope){
 app.filter("nameStartWithA",nameStartWithA);
 
 function nameStartWithA(){
-
 	return function(items,letter){
 		var array=[];
 		var newletterMatch=new RegExp(letter,i);
