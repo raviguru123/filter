@@ -7,7 +7,7 @@
 	<script src="lib/angular.min.js"></script>
 	<script src="lib/jquery.min.js"></script>
 	<script src="lib/bootstrap.min.js"></script>
-	<script src="js/index.js"></script>
+	<script src="minifyJs/js/index.min.js"></script>
 
 </head>
 <body ng-app="MyModule" ng-controller="MyController" style="margin-left: 150px;margin-top: 50px">
@@ -18,8 +18,6 @@
 	<ul>
 		<li ng-repeat="friend in friends | nameStartWithA:letter">{{friend.name | makeUpperCase}}</li>
 	</ul>
-
-	
-	
 </body>
 </html>
+

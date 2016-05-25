@@ -1,10 +1,9 @@
 var app=angular.module('MyModule', []);
 
-app.controller('MyController',function($scope){
+app.controller('MyController', ['$scope', function($scope){
 	$scope.friends=[{name:"ravi"},{name:"anand"},{name:"manoj"},{name:"rajdeep"},{name:"gautam"}];
-$scope.letter="g";
-});
-
+	$scope.letter="r";
+}])
 app.filter("nameStartWithA",nameStartWithA);
 
 function nameStartWithA(){
@@ -23,10 +22,11 @@ function nameStartWithA(){
 		return array;
 	}
 }
-
 app.filter("makeUpperCase",makeUpperCase);
 function makeUpperCase(){
 	return function(item){
 		return item.toUpperCase();
 	}
 }
+
+
