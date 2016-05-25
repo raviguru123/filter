@@ -12,12 +12,14 @@
 </head>
 <body ng-app="MyModule" ng-controller="MyController" style="margin-left: 150px;margin-top: 50px">
 
-	
+	<label ng-controller="initlization" ng-init="initFunction()">{{$parent.letter}}</label>
+	<div >
 	<label>Helllo this is testing of sublime functionality</label>
 	<input type="text" name="" ng-model="letter">
 	<ul>
 		<li ng-repeat="friend in friends | nameStartWithA:letter">{{friend.name | makeUpperCase}}</li>
 	</ul>
+	</div>
 </body>
 </html>
 

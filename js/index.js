@@ -22,6 +22,27 @@ function nameStartWithA(){
 		return array;
 	}
 }
+
+app.controller('initlization', ['$scope', function($scope){
+	
+	$scope.$on('$viewContentLoaded', function(){
+		alert("Dom Content Loaded");
+	});
+	angular.element(document).ready(function(){
+		alert("document ready function in angularjs")
+	});
+
+	$scope.initFunction=function(){
+			$scope.secondFunction();
+			$scope.thirdFunction();
+	};
+	$scope.secondFunction=function(){
+		//alert("first1");
+	}
+	$scope.thirdFunction=function(){
+		//alert("second");
+	}
+}])
 app.filter("makeUpperCase",makeUpperCase);
 function makeUpperCase(){
 	return function(item){
